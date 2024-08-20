@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finden Sie Ihren klassischen Herrenschuhstil - Amir Handgemachte Schuhe</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #4a4a4a;
+            --secondary-color: #a0522d;
+            --button-color: #8B4513;
+            --button-hover-color: #A0522D;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+        }
+        
+        body, html {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .quiz-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .quiz-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .question {
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: var(--secondary-color);
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .option {
+            background-color: #fff;
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option.selected {
+            background-color: var(--button-color);
+            color: #fff;
+        }
+        
+        .option:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+        
+        .option input[type="radio"] {
+            display: none;
+        }
+        
+        .option label {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        button {
+            padding: 17px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            border: 0;
+            background-color: var(--button-color);
+            color: white;
+            box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 15px;
+            transition: all 0.5s ease;
+            display: block;
+            margin: 20px auto 0;
+        }
+        
+        button:hover {
+            letter-spacing: 3px;
+            background-color: var(--button-hover-color);
+            box-shadow: var(--button-color) 0px 7px 29px 0px;
+        }
+        
+        button:active {
+            letter-spacing: 3px;
+            background-color: var(--button-hover-color);
+            box-shadow: var(--button-color) 0px 0px 0px 0px;
+            transform: translateY(10px);
+            transition: 100ms;
+        }
+        
+        #result {
+            margin-top: 30px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .quiz-container {
+                padding: 20px;
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="ueber-uns.html">Über uns</a></li>
+                <li><a href="leistungen.html">Leistungen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="shoe-style-quiz.html">Stilquiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="fade-in">Finden Sie Ihren klassischen Herrenschuhstil</h1>
+        <div class="quiz-container fade-in">
+            <div id="quiz">
+                <div class="question"></div>
+                <div class="options"></div>
+                <button id="submit">Nächste Frage</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <section class="shoe-models fade-in">
+        <h2>klassischen Schuhmodelle</h2><br>
+        <div class="model">
+            <img src="G:\.shortcut-targets-by-id\1ptTiwQ0D2aeqO1C-9JICmFqmirSCW-MH\Togethera\amir schuhe\schuhe-stile\Oxford.jpg" alt="Der Oxford" class="story-image">
+            <p>Der Oxford: Ein zeitloser Klassiker für formelle Anlässe. Seine geschlossene Schnürung verleiht ihm eine elegante, schlanke Silhouette.</p>
+        </div>
+        <div class="model">
+            <img src="G:\.shortcut-targets-by-id\1ptTiwQ0D2aeqO1C-9JICmFqmirSCW-MH\Togethera\amir schuhe\schuhe-stile\Derby.jpg" alt="Der Derby" class="story-image">
+            <p>Der Derby: Mit seiner offenen Schnürung bietet er mehr Flexibilität und Komfort. Ideal für den Büroalltag und Smart-Casual-Outfits.</p>
+        </div>
+        <div class="model">
+            <img src="G:\.shortcut-targets-by-id\1ptTiwQ0D2aeqO1C-9JICmFqmirSCW-MH\Togethera\amir schuhe\schuhe-stile\Monk_Strap.jpg" alt="Der Monk Strap" class="story-image">
+            <p>Der Monk Strap: Eine moderne Alternative zur Schnürung mit einer oder zwei Schnallen. Er vereint Eleganz und einen Hauch von Extravaganz.</p>
+        </div>
+        <div class="model">
+            <img src="G:\.shortcut-targets-by-id\1ptTiwQ0D2aeqO1C-9JICmFqmirSCW-MH\Togethera\amir schuhe\schuhe-stile\Wholecut_Oxford.jpg" alt="Der Wholecut-Oxford" class="story-image">
+            <p>Der Wholecut-Oxford: Aus einem einzigen Stück Leder gefertigt, verkörpert er minimalistische Eleganz. Perfekt für besondere Anlässe und den stilvollen Gentleman.</p>
+        </div>
+    </section>
+
+    <section class="fade-in">
+        <h2>Geschichte schuhstile</h2><br>
+        <div>
+            <p>Die faszinierende Geschichte der Herrenschuhstile
+
+                Die Entwicklung der Herrenschuhmode ist eng mit der Kulturgeschichte verwoben. Der Oxford, benannt nach der berühmten englischen Universität, entstand im 17. Jahrhundert als bequeme Alternative zu Stiefeln. Der Derby, mit seiner offenen Schnürung, wurde im 19. Jahrhundert für sportliche Aktivitäten entwickelt.
+                
+                Der Monk Strap, inspiriert von Mönchssandalen, gewann im frühen 20. Jahrhundert an Popularität. Der Loafer, ursprünglich ein Freizeitschuh norwegischer Fischer, wurde in den 1930er Jahren zum Trendsetzer. 
+                
+                Brogues, mit ihren charakteristischen Lochmustern, dienten anfangs als praktische Wasserdrainage für irische Bauern. Der Chelsea Boot, in den 1850ern erfunden, erlebte in den 1960er Jahren dank der Beatles ein Revival.
+                
+                Jeder dieser Stile erzählt eine einzigartige Geschichte und spiegelt den Wandel der Mode und Gesellschaft wider.</p>
+        </div>
+    </section>
+
+    <script>
+        const quizData = [
+            {
+                question: "Für welchen Anlass suchen Sie hauptsächlich einen klassischen Herrenschuh?",
+                options: ["Geschäftstermine", "Formelle Abendveranstaltungen", "Täglicher Bürogebrauch", "Festliche Anlässe"]
+            },
+            {
+                question: "Welches Ledermaterial bevorzugen Sie für Ihre Schuhe?",
+                options: ["Glattes Kalbsleder", "Strukturiertes Leder", "Box-Kalbleder", "Cordovan-Leder"]
+            },
+            {
+                question: "Welche Farbe sollte Ihr klassischer Herrenschuh haben?",
+                options: ["Schwarz", "Dunkelbraun", "Cognac", "Oxblood"]
+            },
+            {
+                question: "Welches Detail ist Ihnen bei klassischen Herrenschuhen am wichtigsten?",
+                options: ["Rahmengenähte Sohle", "Edle Lochverzierungen", "Glatte Optik", "Hochglanzfinish"]
+            },
+            {
+                question: "Welcher klassische Herrenschuhstil entspricht am ehesten Ihrem Geschmack?",
+                options: ["Oxford", "Derby", "Monk Strap", "Wholecut"]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let answers = [];
+
+        const quizElement = document.getElementById('quiz');
+        const resultElement = document.getElementById('result');
+        const submitButton = document.getElementById('submit');
+        const questionElement = document.querySelector('.question');
+        const optionsElement = document.querySelector('.options');
+
+        function loadQuestion() {
+            const question = quizData[currentQuestion];
+            questionElement.textContent = question.question;
+            
+            optionsElement.innerHTML = '';
+            question.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = `option fade-in${answers[currentQuestion] === index ? ' selected' : ''}`;
+                
+                optionElement.innerHTML = `
+                    <input type="radio" id="option${index}" name="answer" value="${index}">
+                    <label for="option${index}">${option}</label>
+                `;
+                
+                optionElement.addEventListener('click', () => {
+                    document.querySelectorAll('.option').forEach(el => el.classList.remove('selected'));
+                    optionElement.classList.add('selected');
+                });
+                
+                optionsElement.appendChild(optionElement);
+            });
+        }
+
+        function nextQuestion() {
+            const selectedOption = document.querySelector('input[name="answer"]:checked');
+            if (selectedOption) {
+                answers[currentQuestion] = parseInt(selectedOption.value);
+                currentQuestion++;
+                if (currentQuestion < quizData.length) {
+                    loadQuestion();
+                } else {
+                    showResult();
+                }
+            } else {
+                alert('Bitte wählen Sie eine Option aus');
+            }
+        }
+
+        function showResult() {
+            quizElement.style.display = 'none';
+            resultElement.style.display = 'block';
+            
+            let shoeStyle = getShoeStyle();
+            resultElement.innerHTML = `
+                <h2 class="fade-in">Ihr idealer klassischer Herrenschuhstil:</h2>
+                <p class="fade-in">${shoeStyle}</p>
+                <p class="fade-in">Besuchen Sie unsere Werkstatt, um Ihr perfektes Paar handgefertigter Schuhe zu besprechen!</p>
+            `;
+        }
+
+        function getShoeStyle() {
+            const styles = [
+                "Eleganter Oxford aus schwarzem Kalbsleder mit rahmengenähter Sohle - der Inbegriff formeller Eleganz für Geschäftstermine und festliche Anlässe.",
+                "Klassischer Derby aus dunkelbraunem Box-Kalbleder mit dezenten Broguing-Details - vielseitig einsetzbar vom Büroalltag bis zum gehobenen Casual-Look.",
+                "Stilvoller Monk Strap aus Cognac-farbenem Cordovan-Leder - eine ausgezeichnete Wahl für den modebewussten Gentleman mit Sinn für Tradition.",
+                "Exquisiter Wholecut-Oxford aus Oxblood-farbenem Kalbsleder mit Hochglanzfinish - das Statement-Piece für besondere Abendveranstaltungen."
+            ];
+            let styleIndex = answers.reduce((a, b) => a + b, 0) % styles.length;
+            return styles[styleIndex];
+        }
+
+        submitButton.addEventListener('click', nextQuestion);
+        loadQuestion();
+    </script>
+
+    <footer>
+        <p>© 2024 Amir Handgemachte Schuhe. Alle Rechte vorbehalten.</p>
+        <p class="developer-info">Website entwickelt von Daniil Panchenko und Oleg Khutoryansky</p>
+    </footer>
+    
+</body>
+</html>
